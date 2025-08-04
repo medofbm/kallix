@@ -20,7 +20,7 @@
       font-size: 1.1rem;
     }
     .icon {
-      color: #dc3545; /* Red color for icons */
+      color: #dc3545; /* الأحمر للأيقونات */
       margin-left: 10px;
     }
     .btn-danger {
@@ -31,6 +31,16 @@
     .btn-danger:hover {
       background-color: #a0232f;
       border-color: #a0232f;
+    }
+    /* الألوان المخصصة للزر الأخضر */
+    .btn-success-custom {
+      background-color: #28a745;
+      border-color: #28a745;
+      transition: background-color 0.3s ease;
+    }
+    .btn-success-custom:hover {
+      background-color: #1e7e34;
+      border-color: #1e7e34;
     }
     .shadow-sm {
         box-shadow: 0 .125rem .25rem rgba(255, 255, 255, .075) !important;
@@ -44,10 +54,9 @@
     }
     .carousel-item img {
         height: auto;
-        max-height: 500px; /* Optional: limit the height on larger screens */
-        object-fit: contain; /* Ensure the image fits within the container */
+        max-height: 500px;
+        object-fit: contain;
     }
-    /* Hide the carousel controls on desktop to encourage swiping on mobile */
     @media (min-width: 768px) {
         .carousel-control-prev, .carousel-control-next {
             display: none;
@@ -139,7 +148,7 @@
       <video src="video/customer-review.mp4" controls class="rounded"></video>
     </div>
     <div class="text-center mt-4">
-        <p class="lead text-white-50">"جودة ممتازة وتصميم عملي، سهل علي تمرين الكاليسثينكس كثير!"</p>
+        <p class="lead text-white-50">"جودة ممتازة وتصميم عملي، سهل علي التمارين كثيراً!"</p>
     </div>
   </section>
 
@@ -164,7 +173,7 @@
         <label for="quantity" class="form-label">عدد القطع:</label>
         <input type="number" id="quantity" class="form-control" value="1" min="1" required />
       </div>
-      <button type="submit" class="btn btn-danger w-100 btn-lg">أرسل الطلب على واتساب</button>
+      <button type="submit" class="btn btn-success w-100 btn-lg">أرسل الطلب على واتساب</button>
     </form>
   </section>
 
@@ -176,7 +185,7 @@
       const city = document.getElementById("city").value;
       const quantity = document.getElementById("quantity").value;
 
-      const message = `مرحباً، أود طلب منتج KALLIX:\nالاسم: ${name}\nالهاتف: ${phone}\nالمدينة: ${city}\nالعدد: ${quantity}\n\nيرجى تأكيد الطلب وتحديد موعد التسليم. شكراً.`;
+      const message = `مرحباً، أود طلب منتج KALLIX:\nالاسم: ${name}\nالهاتف: ${phone}\nالمدينة: ${city}\nالعدد: ${quantity}`;
       const whatsappUrl = `https://wa.me/218931457034?text=${encodeURIComponent(message)}`;
 
       window.open(whatsappUrl, '_blank');
