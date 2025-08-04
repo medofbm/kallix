@@ -32,7 +32,6 @@
       background-color: #a0232f;
       border-color: #a0232f;
     }
-    /* الألوان المخصصة للزر الأخضر */
     .btn-success-custom {
       background-color: #28a745;
       border-color: #28a745;
@@ -62,15 +61,32 @@
             display: none;
         }
     }
+    .price-old {
+        text-decoration: line-through;
+        color: #888;
+        font-size: 1.2rem;
+        margin-left: 15px;
+    }
+    .price-new {
+        color: #dc3545;
+        font-size: 2rem;
+        font-weight: bold;
+    }
   </style>
 </head>
 <body>
 
   <section class="text-center p-5">
-    <img src="images/505770651_122129822750827525_7339619292777503677_n.jpg" class="img-fluid rounded mb-4 shadow" alt="KALLIX Bag" style="max-height:450px;">
+    <img src="images\FB_IMG_1754344026037.jpg" class="img-fluid rounded mb-4 shadow" alt="KALLIX Bag" style="max-height:450px;">
     <h1 class="text-danger-custom display-4 fw-bold">KALLIX</h1>
     <h4 class="text-white-50">معدات رياضية للكاليسثينكس</h4>
     <p class="lead mt-3">شنطة تمرين احترافية مصممة خصيصًا لتوفير الراحة والترتيب. تصميم ذكي، جودة عالية، وتوصيل سريع.</p>
+    
+    <div class="mt-4 mb-4">
+        <span class="price-old">185 د.ل</span>
+        <span class="price-new">99 د.ل</span>
+    </div>
+
     <a href="#order" class="btn btn-danger btn-lg mt-3">اطلب الآن</a>
   </section>
 
@@ -172,6 +188,10 @@
       <div class="mb-4">
         <label for="quantity" class="form-label">عدد القطع:</label>
         <input type="number" id="quantity" class="form-control" value="1" min="1" required />
+      </div>
+      <div class="text-center mb-4">
+        <span class="price-old">185 د.ل</span>
+        <span class="price-new">99 د.ل</span>
       </div>
       <button type="submit" class="btn btn-success w-100 btn-lg">أرسل الطلب على واتساب</button>
     </form>
